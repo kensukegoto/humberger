@@ -12,14 +12,24 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p id="menu--burger" class="burger open">
+    <p class="menu--btn">
         <span></span>
         <span></span>
         <span></span>
     </p>
+    <div class="menu--lists">
+        <ul>
+            <li>メニュー１</li>
+            <li>メニュー２</li>
+            <li>メニュー３</li>
+            <li>メニュー４</li>
+            <li>メニュー５</li>
+        </ul>
+    </div>
     <script>
-        $("#menu--burger").on("click",function(){
+        $(".menu--btn").on("click",function(){
             $(this).toggleClass("open");
+            $(".menu--lists").toggleClass("open");
         });
     </script>
 </body>
