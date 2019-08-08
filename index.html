@@ -12,24 +12,32 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p class="menu--btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </p>
-    <div class="menu--lists">
-        <ul>
-            <li>メニュー１</li>
-            <li>メニュー２</li>
-            <li>メニュー３</li>
-            <li>メニュー４</li>
-            <li>メニュー５</li>
-        </ul>
-    </div>
+    <header>
+        <p class="menu--btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
+        <div class="menu--lists">
+            <ul>
+                <li>メニュー１</li>
+                <li>メニュー２</li>
+                <li>メニュー３</li>
+                <li>メニュー４</li>
+                <li>メニュー５</li>
+            </ul>
+        </div>
+        <div class="menu--bg"></div>
+    </header>
+    <main>
+        <h2>猛烈な勢力に発達</h2>
+        <p>大型の台風9号は、きょう8日午後9時に「猛烈な」勢力になりました。午後9時現在、中心気圧は925hPa、中心付近の最大風速は毎秒55メートルで、石垣島の東約70kmを時速15kmで北西へ進んでいます。台風は勢力を維持したまま、9日の明け方にかけて石垣島など先島諸島に最も接近する見込みです。沖縄では先島諸島を中心に大荒れの恐れあり、暴風や高波、大雨に厳重な警戒が必要です。</p>
+    </main>
     <script>
-        $(".menu--btn").on("click",function(){
-            $(this).toggleClass("open");
+        $(".menu--btn,.menu--bg").on("click",function(){
+            $(".menu--btn").toggleClass("open");
             $(".menu--lists").toggleClass("open");
+            $(".menu--bg").toggleClass("open");
         });
     </script>
 </body>
