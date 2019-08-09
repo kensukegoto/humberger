@@ -60,14 +60,15 @@
       add_effect(500, "arrow", "down");
 
       function add_effect(duration, typeBtn, typeList) {
+
         var effectsBtn = ["send", "arrow"];
         var effectsList = ["down", "fade"];
 
         if (effectsBtn.indexOf(typeBtn) === -1) {
-          typeBtn = "default";
+          typeBtn = "close";
         }
         if (effectsList.indexOf(typeList) === -1) {
-          typeList = "default";
+          typeList = "toRight";
         }
 
         $(".menu").addClass(typeBtn + " " + typeList);

@@ -44,21 +44,21 @@ h1{
 }
 
 /*
-* default
+* close
 */
-.open.default .menu--btn span{
+.open.close .menu--btn span{
     background-color: #fff;
 }
-.open.default .menu--btn span:first-child{
+.open.close .menu--btn span:first-child{
     transform: translateY(24px) rotate(45deg)
 }
-.open.default .menu--btn span:nth-child(2){
+.open.close .menu--btn span:nth-child(2){
     opacity: 0;
 }
-.open.default .menu--btn span:last-child{
+.open.close .menu--btn span:last-child{
     transform: translateY(-24px) rotate(-45deg)
 }
-/* default ----------------------------------*/
+/* close ----------------------------------*/
 
 /*
 * send
@@ -114,7 +114,7 @@ h1{
     color: #fff;
     z-index: 5;
 }
-.menu.open .menu--lists{
+.open.toRight .menu--lists{
     transform: translateX(0%);
 }
 .menu--lists ul{
@@ -132,7 +132,7 @@ h1{
     z-index: 1;
     display: none;
 }
-.menu.open .menu--bg{
+.open.toRight .menu--bg{
     opacity: .5;
     display: block;
 }
