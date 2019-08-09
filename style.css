@@ -38,16 +38,16 @@ h1{
 .menu--btn span:last-child{
     bottom: 0;
 }
-.menu--btn.open span{
+.menu.open  .menu--btn span{
     background-color: #fff;
 }
-.menu--btn.open span:first-child{
+.menu.open  .menu--btn span:first-child{
     transform: translateY(24px) rotate(45deg)
 }
-.menu--btn.open span:nth-child(2){
+.menu.open .menu--btn span:nth-child(2){
     opacity: 0;
 }
-.menu--btn.open span:last-child{
+.menu.open .menu--btn span:last-child{
     transform: translateY(-24px) rotate(-45deg)
 }
 
@@ -63,11 +63,11 @@ h1{
     color: #fff;
     z-index: 5;
 }
-.menu--lists.open{
+.menu.open  .menu--lists{
     transform: translateX(0%);
 }
 .menu--lists ul{
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .menu--bg{
@@ -80,7 +80,9 @@ h1{
     height: 100%;
     z-index: 1;
     transition: opacity .5s;
+    display: none;
 }
-.menu--bg.open{
+.menu.open .menu--bg{
     opacity: .5;
+    display: block;
 }

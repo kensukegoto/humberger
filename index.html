@@ -12,7 +12,7 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="menu">
         <p class="menu--btn">
             <span></span>
             <span></span>
@@ -36,9 +36,7 @@
     </main>
     <script>
         $(".menu--btn,.menu--bg").on("click",function(){
-            $(".menu--btn").toggleClass("open");
-            $(".menu--lists").toggleClass("open");
-            $(".menu--bg").toggleClass("open");
+            $(".menu").toggleClass("open");
         });
     </script>
 </body>
