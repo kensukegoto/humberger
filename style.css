@@ -6,12 +6,18 @@ body.noscroll{
     overflow: hidden;
 }
 
+main{
+    margin-top: 80px;
+}
+
 header{
-    position: relative;
     text-align: center;
     background-color: #000;
     color: #fff;
     height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 h1{
