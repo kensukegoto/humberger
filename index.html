@@ -41,9 +41,9 @@
             $(".menu").toggleClass("open");
         });
 
-        add_effect("arrow","down");
+        add_effect(500,"arrow","down");
         
-        function add_effect(typeBtn,typeList){
+        function add_effect(duration,typeBtn,typeList){
 
             var effectsBtn = [
                 "send",
@@ -62,6 +62,9 @@
             }
 
             $(".menu").addClass(typeBtn + " " + typeList);
+            $(".menu--btn,.menu--btn span,.menu--lists,.menu--bg").css({
+                "transition" : "all " + (duration/1000) + "s"
+            })
 
         };
 
