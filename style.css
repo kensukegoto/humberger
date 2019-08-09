@@ -9,16 +9,7 @@ header{
     color: #fff;
     height: 80px;
 }
-header::before{
-    content: "";
-    background: #000;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+
 h1{
     line-height: 80px;
 }
@@ -30,6 +21,7 @@ h1{
     transform: translateY(-50%);
     left: 10px;
     z-index: 10;
+    transition: all .5s;
 }
 .menu--btn span{
     width: 100%;
@@ -109,8 +101,6 @@ h1{
 /* send ----------------------------------*/
 
 
-
-
 .menu--lists{
     width: 80%;
     background: red;
@@ -145,4 +135,61 @@ h1{
 .menu.open .menu--bg{
     opacity: .5;
     display: block;
+}
+
+/* --------------------------------
+    down show
+-------------------------------- */
+
+.down.open .menu--btn.arrow{
+    transform: translateY(-50%) rotate(90deg);
+}
+.down.open .menu--bg{
+    display: none;
+}
+
+.down { 
+    z-index:0;
+}
+.down::after { 
+    content: '';
+    background: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.down .menu--lists {
+    z-index: -2;
+    transform: translateY(-100%); 
+    width: 100%;
+}
+.down.open .menu--lists { 
+    transform: translateY(0%); 
+}
+
+/* --------------------------------
+    fade
+-------------------------------- */
+
+
+.fade .menu--lists {
+    transform: none;
+    display: none;
+    opacity: 0; 
+    width: 100%;
+    animation: fadeIn .8s forwards;
+}
+
+.fade.open .menu--lists { 
+    display: block;
+}
+
+@keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
 }

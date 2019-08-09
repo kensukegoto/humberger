@@ -41,7 +41,8 @@
             $(".menu").toggleClass("open");
         });
 
-        add_effect("arrow");
+        add_effect("send");
+        add_effect2("fade");
         
         function add_effect(type){
 
@@ -57,6 +58,21 @@
             $(".menu--btn").addClass(type);
 
         };
+
+        function add_effect2(type){
+
+            var list = [
+                "down",
+                "fade"
+            ];
+
+            if(list.indexOf(type) === -1){
+                type = "default"
+            }
+
+            $(".menu").addClass(type);
+
+        }
 
     </script>
 </body>
