@@ -35,9 +35,29 @@
         <p>アメリカ合衆国を代表する国民食とされる。マクドナルドがフランチャイズを成功させ、ファストフードの代名詞となっている。この料理は世界中に広まり、文化や好みに合わせて多様なアレンジがなされ、バンズの代わりにご飯やレタスで挟んだものや、ビーフパティの代わりに大豆タンパクなどを用いたベジタリアンのための「ヴェジーバーガー」（Veggie burger）などが作り出されている。</p>
     </main>
     <script>
+
+
         $(".menu--btn,.menu--bg").on("click",function(){
             $(".menu").toggleClass("open");
         });
+
+        add_effect("arrow");
+        
+        function add_effect(type){
+
+            var list = [
+                "send",
+                "arrow"
+            ];
+
+            if(list.indexOf(type) === -1){
+                type = "default"
+            }
+
+            $(".menu--btn").addClass(type);
+
+        };
+
     </script>
 </body>
 </html>
