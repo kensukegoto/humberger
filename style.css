@@ -21,7 +21,6 @@ h1{
     transform: translateY(-50%);
     left: 10px;
     z-index: 10;
-    transition: all .5s;
 }
 .menu--btn span{
     width: 100%;
@@ -44,16 +43,16 @@ h1{
 /*
 * default
 */
-.open .default.menu--btn span{
+.open.default .menu--btn span{
     background-color: #fff;
 }
-.open  .default.menu--btn span:first-child{
+.open.default .menu--btn span:first-child{
     transform: translateY(24px) rotate(45deg)
 }
-.open .default.menu--btn span:nth-child(2){
+.open.default .menu--btn span:nth-child(2){
     opacity: 0;
 }
-.open .default.menu--btn span:last-child{
+.open.default .menu--btn span:last-child{
     transform: translateY(-24px) rotate(-45deg)
 }
 /* default ----------------------------------*/
@@ -61,18 +60,18 @@ h1{
 /*
 * send
 */
-.open .send.menu--btn span{
+.open.send .menu--btn span{
     background-color: #fff;
 }
-.open .send.menu--btn span:first-child{
+.open.send .menu--btn span:first-child{
     transform: translateY(24px) rotate(45deg)
 }
-.open .send.menu--btn span:nth-child(2){
+.open.send .menu--btn span:nth-child(2){
     opacity: 0;
     left: 200%;
     animation: active-menu-bar02 .8s forwards;
 }
-.open .send.menu--btn span:last-child{
+.open.send .menu--btn span:last-child{
     transform: translateY(-24px) rotate(-45deg)
 }
 @keyframes active-menu-bar02 {
@@ -85,15 +84,15 @@ h1{
 /*
 * send
 */
-.open .arrow.menu--btn span{
+.open.arrow .menu--btn span{
     background-color: #fff;
 }
-.open .arrow.menu--btn span:first-child{
+.open.arrow .menu--btn span:first-child{
     transform: translate(-3px,17px) rotate(-45deg);
     width: 20px;
 }
 
-.open .arrow.menu--btn span:last-child{
+.open.arrow .menu--btn span:last-child{
     transform: translate(-3px,-17px) rotate(45deg);
     width: 20px;
 }
@@ -141,7 +140,10 @@ h1{
     down show
 -------------------------------- */
 
-.down.open .menu--btn.arrow{
+.down.arrow .menu--btn{
+    transition: all .5s;
+}
+.down.arrow.open .menu--btn{
     transform: translateY(-50%) rotate(90deg);
 }
 .down.open .menu--bg{

@@ -41,38 +41,31 @@
             $(".menu").toggleClass("open");
         });
 
-        add_effect("send");
-        add_effect2("fade");
+        add_effect("arrow","down");
         
-        function add_effect(type){
+        function add_effect(typeBtn,typeList){
 
-            var list = [
+            var effectsBtn = [
                 "send",
                 "arrow"
             ];
-
-            if(list.indexOf(type) === -1){
-                type = "default"
-            }
-
-            $(".menu--btn").addClass(type);
-
-        };
-
-        function add_effect2(type){
-
-            var list = [
+            var effectsList = [
                 "down",
                 "fade"
             ];
 
-            if(list.indexOf(type) === -1){
-                type = "default"
+            if(effectsBtn.indexOf(typeBtn) === -1){
+                typeBtn = "default"
+            }
+            if(effectsList.indexOf(typeList) === -1){
+                typeList = "default"
             }
 
-            $(".menu").addClass(type);
+            $(".menu").addClass(typeBtn + " " + typeList);
 
-        }
+        };
+
+
 
     </script>
 </body>
